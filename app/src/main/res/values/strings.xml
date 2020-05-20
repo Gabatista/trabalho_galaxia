@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Galáxia</string>
+    <string name="loading">Loading</string>
+    <string name="url_base">https://api.nasa.gov/</string>
+    <string name="versionamento">Versão 1.0</string>
+    <string name="title_activity_mapa">Map</string>
+    <string name="intro">Se interessou por astronomia?  Abaixo temos opções de visualizar áreas relacionadas à astronomia perto de sua localização, ou um chatbot para conversar sobre astronomia.</string>
+</resources>

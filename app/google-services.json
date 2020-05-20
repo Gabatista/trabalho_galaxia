@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "673361664543",
+    "firebase_url": "https://trabalho-5d8ed.firebaseio.com",
+    "project_id": "trabalho-5d8ed",
+    "storage_bucket": "trabalho-5d8ed.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:673361664543:android:1c9a181527d3030b5ad32a",
+        "android_client_info": {
+          "package_name": "com.cursoandroid.trabalho"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "673361664543-iu995gfru86jvmah6eb0bl5mg87v6st0.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.cursoandroid.trabalho",
+            "certificate_hash": "b817b22e8c22b8926cbc80bd6eed68df2c21195b"
+          }
+        },
+        {
+          "client_id": "673361664543-26i92utp30im6ffa1uc41b1j62m37qpv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBUiSm-37VJ9FxBuj5J4ouDyoPhA5y6LQg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "673361664543-26i92utp30im6ffa1uc41b1j62m37qpv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

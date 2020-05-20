@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Theme.AppCompat.Light.NoActionBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/estrelas_fundo"
+    android:orientation="vertical"
+    android:paddingTop="50dp"
+    app:layout_goneMarginTop="50dp"
+    tools:context=".view.activity.MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/bt_foto_dia"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:text="Foto Do Dia" />
+
+    <Button
+        android:id="@+id/bt_foto_periodo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_marginTop="50dp"
+        android:text="Foto Por Período" />
+
+    <Button
+        android:id="@+id/bt_interesses"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="50dp"
+        android:layout_marginTop="15dp"
+        android:text="Extras" />
+
+</LinearLayout>
