@@ -4,5 +4,8 @@
     <string name="url_base">https://api.nasa.gov/</string>
     <string name="versionamento">Versão 1.0</string>
     <string name="title_activity_mapa">Map</string>
+    <string name="email_sub"><u>Digite seu e-mail</u></string>
+    <string name="nome_sub"><u>Digite seu e-mail</u></string>
+    <string name="senha_sub"><u>Digite seu e-mail</u></string>
     <string name="intro">Se interessou por astronomia?  Abaixo temos opções de visualizar áreas relacionadas à astronomia perto de sua localização, ou um chatbot para conversar sobre astronomia.</string>
 </resources>

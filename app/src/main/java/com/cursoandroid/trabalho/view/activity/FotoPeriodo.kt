@@ -15,6 +15,8 @@ class FotoPeriodo: AppCompatActivity() {
         ViewModelProvider(this).get(FotoViewModel::class.java)
     }
 
+
+
     private lateinit var linearLayoutManager: LinearLayoutManager
 
     override fun onCreate(savedInstanceState: Bundle?) {

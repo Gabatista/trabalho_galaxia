@@ -7,16 +7,20 @@ import androidx.appcompat.app.AppCompatActivity
 import com.cursoandroid.trabalho.R
 import com.cursoandroid.trabalho.domain.Perfil
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.*
+import com.google.firebase.database.FirebaseDatabase
 import kotlinx.android.synthetic.main.cadastro_activity.*
 
 class CadastroActivity : AppCompatActivity() {
 
-    private var perfil: Perfil ?= null
+    private lateinit var perfil: Perfil
+    private lateinit var database : FirebaseDatabase
+    private var uid = FirebaseAuth.getInstance().uid
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.cadastro_activity)
+
+        database = FirebaseDatabase.getInstance()
 
         bt_cadastro.setOnClickListener {
             cadastroUsuario()
@@ -26,13 +30,13 @@ class CadastroActivity : AppCompatActivity() {
     private fun cadastroUsuario() {
         val email = et_email.text.toString()
         val senha = et_senha.text.toString()
+        val nome: String = et_nome.text.toString()
 
-        if (!email.isEmpty() && !senha.isEmpty()) {
+        if (!email.isEmpty() && !senha.isEmpty() && !nome.isEmpty()) {
             FirebaseAuth.getInstance()
                 .createUserWithEmailAndPassword(email, senha)
                 .addOnCompleteListener {
                     if (it.isSuccessful) {
-                        Toast.makeText(this, "Cadastro feito com sucesso", Toast.LENGTH_LONG).show()
                         salvarDados()
                         abreTelaInicial()
                         finish()
@@ -51,16 +55,19 @@ class CadastroActivity : AppCompatActivity() {
     }
 
     private fun salvarDados(){
+        var email = et_email.text.toString()
+        var nome: String = et_nome.text.toString()
 
-        perfil = Perfil(
-            email = et_email.text.toString(),
-            nome = et_nome.text.toString()
-            //visualizacoes = null
-        )
+        val uid = FirebaseAuth.getInstance().uid
+        var ref = FirebaseDatabase.getInstance().getReference("perfil")
+        val id: String? = ref.push().key
 
-        val ref = FirebaseDatabase.getInstance().getReference().child("perfil")
-        ref.push().setValue(perfil)
-
+        val perfil = Perfil(uid,email,nome)
+        if (uid != null) {
+            ref.child(uid).setValue(perfil).addOnCompleteListener {
+                Toast.makeText(applicationContext,"Cadastro feito com sucesso",Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
 }

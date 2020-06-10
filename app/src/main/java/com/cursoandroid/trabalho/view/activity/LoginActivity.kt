@@ -11,10 +11,12 @@ import kotlinx.android.synthetic.main.login_activity.*
 
 class LoginActivity : AppCompatActivity() {
 
+    private lateinit var auth: FirebaseAuth
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.login_activity)
-        FirebaseApp.initializeApp(this)
+        auth = FirebaseAuth.getInstance()
 
         verificaLogado()
 
@@ -68,8 +70,14 @@ class LoginActivity : AppCompatActivity() {
         startActivity(intent)
     }
 
+    public override fun onStart() {
+        super.onStart()
+        val usuarioAtual = auth.currentUser
+        verificaLogado()
+    }
+
     private fun verificaLogado(){
-        val autenticado = FirebaseAuth.getInstance().uid
+        val autenticado = FirebaseAuth.getInstance().currentUser
         if(autenticado == null){
         }else{
             val intent = Intent(this,MainActivity::class.java)

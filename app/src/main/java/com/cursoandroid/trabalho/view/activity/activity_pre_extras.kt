@@ -4,13 +4,13 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.cursoandroid.trabalho.R
-import kotlinx.android.synthetic.main.activity_pre_mapa.*
+import kotlinx.android.synthetic.main.activity_pre_extras.*
 
 class activity_pre_extras : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_pre_mapa)
+        setContentView(R.layout.activity_pre_extras)
 
 
 

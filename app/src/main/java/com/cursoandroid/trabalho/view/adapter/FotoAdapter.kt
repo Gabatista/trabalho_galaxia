@@ -47,6 +47,8 @@ class FotoAdapter(private val fotos: Array<Foto>)
 
 
     }
+
+
     
 
 }

@@ -1,4 +1,7 @@
 package com.cursoandroid.trabalho.domain
 
-class Visualizados {
-}
+data class Visualizados (
+    var id : String ?= null,
+    var FotoDia : String ?= null,
+    var VisualizadoDia : String ?= null
+)

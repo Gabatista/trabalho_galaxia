@@ -30,7 +30,20 @@ android {
         targetCompatibility JavaVersion.VERSION_1_8
     }
 
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/license.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/notice.txt'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/INDEX.LIST'
+    }
+
 }
+
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -58,7 +71,7 @@ dependencies {
     //FIREBASE
     implementation 'com.google.firebase:firebase-auth:19.3.1'
     implementation 'com.google.firebase:firebase-database:19.3.0'
-    implementation 'com.google.firebase:firebase-core:17.4.1'
+    implementation 'com.google.firebase:firebase-core:17.4.2'
 
     //RETROFIT e GSON
     implementation 'com.google.code.gson:gson:2.8.6'
@@ -88,5 +101,10 @@ dependencies {
     //dialogflow
     implementation 'ai.api:sdk:2.0.7@aar'
     implementation 'ai.api:libai:1.6.12'
+    implementation 'com.google.cloud:google-cloud-dialogflow:0.92.0-alpha'
+
+        //pusher
+    implementation 'com.pusher:pusher-java-client:2.2.1'
+
 }
 apply plugin: 'com.google.gms.google-services'
